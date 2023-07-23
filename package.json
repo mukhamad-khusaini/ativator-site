@@ -1,34 +1,26 @@
 {
-  "name": "ativator",
-  "version": "1.0.0",
-  "private": true,
-  "description": "ativator",
-  "author": "BantuMasyarakat",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "gatsby": "^5.11.0",
-    "gatsby-plugin-google-gtag": "^5.11.0",
-    "gatsby-plugin-image": "^3.11.0",
-    "gatsby-plugin-sharp": "^5.11.0",
-    "gatsby-source-filesystem": "^5.11.0",
-    "gatsby-transformer-sharp": "^5.11.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.3.1",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "typescript": "^5.1.3"
-  }
+    "name": "ativator-site",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "tailwind": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css --watch"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.14",
+        "cookie-parser": "~1.4.4",
+        "debug": "~2.6.9",
+        "ejs": "~2.6.1",
+        "express": "~4.16.1",
+        "googleapis": "^118.0.0",
+        "http-errors": "~1.6.3",
+        "morgan": "~1.9.1",
+        "postcss": "^8.4.24",
+        "postcss-cli": "^10.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22",
+        "tailwind-clip-path": "^1.0.0",
+        "tailwindcss": "^3.3.2"
+    }
 }

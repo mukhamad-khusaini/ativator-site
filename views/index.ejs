@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATIVATOR | UNY</title>
+        <link rel="stylesheet" href="./stylesheets/style.css" />
+        <link rel="stylesheet" href="./stylesheets/plugin.css" />
+        <link rel="shortcut icon" href="/images/logoICO.png" type="image/x-icon" />
+    </head>
+    <body>
+        <main class="h-screen w-full snap-mandatory snap-y">
+            <div class="h-screen w-full bg-[url('/images/mainBG.jpg')] fixed bg-center bg-cover"></div>
+            <div class="bg-black opacity-25 w-full h-screen fixed left-0 right-0 z-0"></div>
+
+            <!-- Head section -->
+            <section class="relative z-10 snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-5">
+                    <img src="/images/mainLogo.png" alt="Ativator Logo" class="w-[60px]" />
+                </div>
+                <div class="flex justify-center items-center px-[17rem] h-[45vh]">
+                    <h1 class="text-white font-body text-center leading-[3rem] text-[3rem]">
+                        "Support the creation of <span class="text-blueDark">appropriate technology</span> to help people's lives"
+                    </h1>
+                </div>
+                <div class="flex justify-center items-center h-[35vh]">
+                    <img src="/images/scrollIC.png" alt="Scroll" class="w-[2rem]" />
+                </div>
+            </section>
+
+            <!-- Vision Section -->
+            <section class="relative z-10 h-screen snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-7">
+                    <img src="/images/visionTitle.png" alt="Our Vision" class="w-[20rem]" />
+                </div>
+                <div class="flex justify-center items-center w-auto h-[80vh] py-7">
+                    <div class="w-[40rem] h-[20rem] flex justify-center items-center text-center border-8 py-3 px-5">
+                        <p class="italic text-blueDark text-3xl">
+                            Making ATIVATOR as a forum to collect, develop, and realise ideas in the field of appropriate technology to form
+                            a creative, innovative, and collaborative generation in facing the Disruption Era.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Misson Section -->
+            <section class="relative z-10 h-screen overflow-hidden snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-7">
+                    <img src="/images/missionTitle.png" alt="Our Mission" class="w-[20rem]" />
+                </div>
+                <div class="flex justify-center items-center w-auto h-[80vh] py-7">
+                    <div class="w-[45rem] h-[20rem] flex justify-center items-center font-body text-white text-3xl">
+                        <ul style="list-style-position: outside; list-style-type: decimal" class="leading-[3rem]">
+                            <li>Provide a platform for members to channel their ideas</li>
+                            <li>Hold discussions on the development of ideas submitted by members</li>
+                            <li>Develop a creative and innovative attitude through tool development and design activities</li>
+                            <li>
+                                Develop a collaborative attitude through cooperation between divisions that is realised in competition
+                                activities
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="w-[40rem] h-[20rem] flex justify-center items-center text-center border-8 py-3 px-5 absolute left-[-30rem] top-48"
+                ></div>
+                <div
+                    class="w-[40rem] h-[20rem] flex justify-center items-center text-center border-8 py-3 px-5 absolute left-[70rem] top-48"
+                ></div>
+            </section>
+
+            <!-- Achivement Section -->
+            <section class="relative z-10 h-screen snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-7">
+                    <img src="/images/achTitle.png" alt="Our Vision" class="w-[20rem]" />
+                </div>
+                <div class="flex justify-center items-center w-auto h-[80vh] py-7">
+                    <div class="w-[60rem] h-full flex justify-start items-center text-center py-3 px-5">
+                        <div class="clickedLf w-[10%] h-full clip-path-triangleLf bg-arrowLf"></div>
+                        <div class="containerAnimated w-[80%] h-full overflow-hidden">
+                            <!-- this animated -->
+                            <div class="animated w-[200rem] h-full flex">
+                                <% data.forEach(e => {%>
+                                <span class="w-[23%] flex">
+                                    <div class="w-[100%] h-full flex justify-center items-center">
+                                        <img
+                                            src="https://drive.google.com/uc?export=view&id=<%= e['Bukti mengikuti (Surat tugas/Sertifikat/Foto kegiatan)'].split(',')[0].slice(33,
+                                        e['Bukti mengikuti (Surat tugas/Sertifikat/Foto kegiatan)'].split(',')[0].length) %>"
+                                            alt="bukti"
+                                            class="w-[60%] h-[20rem] border-[0.6rem] object-cover"
+                                        />
+                                    </div>
+                                    <div class="flex flex-col justify-center gap-7 items-start w-full ps-28">
+                                        <div>
+                                            <h2 class="font-body text-left text-white text-[2.5rem] leading-4">Competition</h2>
+                                            <p class="text-blueDark text-left font-bold text-[1.5rem]"><%= e["Nama perlombaan"] %></p>
+                                        </div>
+                                        <div>
+                                            <h2 class="font-body text-left text-white text-[2.5rem] leading-4">Achivement</h2>
+                                            <p class="text-blueDark text-left font-bold text-[1.5rem]">
+                                                <%= e["Peringkat (Juara 1/Juara 2/ Finalis/ Harapan/Best presentation)"] %>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h2 class="font-body text-left text-white text-[2.5rem] leading-4">Date Of Event</h2>
+                                            <p class="text-blueDark text-left font-bold text-[1.5rem]">
+                                                <%= e["Tanggal pelaksanaan lomba"] %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </span>
+                                <% }) %>
+                            </div>
+                        </div>
+                        <div class="clickedRg w-[10%] h-full clip-path-triangleRg bg-arrowRg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Participation Section -->
+            <section class="relative z-10 h-screen overflow-hidden snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-7">
+                    <img src="/images/participateTitle.png" alt="Participation" class="w-[35rem]" />
+                </div>
+                <div class="flex justify-center items-center w-auto h-[80vh] py-7">
+                    <div class="w-[45rem] h-[20rem] flex justify-center items-center gap-8 font-body text-white text-3xl">
+                        <img src="/images/expoIC.png" alt="Expo" class="w-[24rem]" />
+                        <img src="/images/unitechIC.png" alt="unitech" class="w-[19rem]" />
+                        <img src="/images/plnIC.png" alt="PLN ICE" class="w-[6rem]" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="relative z-10 h-screen overflow-hidden snap-center">
+                <div class="flex justify-center items-center w-full h-auto py-7">
+                    <img src="/images/collabTitle.png" alt="Participation" class="w-[30rem]" />
+                </div>
+                <div class="flex justify-center items-center w-auto h-[40vh] py-7">
+                    <div class="w-[45rem] h-[20rem] flex justify-center items-center gap-8 font-body text-white text-3xl">
+                        <a href="#" class="block no-underline">
+                            <h1 class="px-12 py-5 text-4xl shadow-xl bg-white font-body text-blueDark">Contact Us</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="h-full bg-white">
+                    <div class="h-[15%] flex justify-center items-center">
+                        <img src="/images/otherTitle.png" alt="Other" class="w-[7%]" />
+                    </div>
+                    <div class="h-[23%]">
+                        <a href="" class="block font-bold text-gray-400 text-center no-underline">All Achivement</a>
+                        <a href="" class="block font-bold text-gray-400 text-center no-underline">All Teams</a>
+                    </div>
+                    <div class="border-t border-gray-400">
+                        <p class="text-center font-bold text-sm text-gray-400">&copy; Copyright 2023 | All Right Reserved</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="/javascripts/main.js"></script>
+    </body>
+</html>
