@@ -8,7 +8,7 @@ const spreadsheetId = "1NH2KxlnVROWEKzDAa4QIoa0rlFCKP_bkGbG0h_o4VpM";
 async function getSheetData() {
     const auth = new google.auth.GoogleAuth({
         scopes: "https://www.googleapis.com/auth/spreadsheets",
-        keyFile: `${process.cwd()}\\credentials.json`,
+        keyFile: `../credentials.json`,
     });
 
     const client = await auth.getClient();
